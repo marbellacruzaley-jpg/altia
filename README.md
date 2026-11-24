@@ -11,9 +11,9 @@ Sistema de gestión para ALTIA, empresa de desarrollo de páginas web. Funciona 
 
 ## Tecnología
 
-- Una sola página (`index.html`) publicada con GitHub Pages.
+- Una sola página (`index.html`) publicada con GitHub Pages; la conexión a Supabase está en `config.js`.
 - Datos en **Supabase**: la tabla `public.registros` (ver `schema.sql`), con seguridad a nivel de fila (RLS). Solo los usuarios autenticados pueden leer y escribir.
 - Inicio de sesión con Supabase Auth. Usuarios: Fabiola y Ulises. El registro público está desactivado.
 - Los cambios se sincronizan en vivo entre los dos usuarios (Supabase Realtime).
 
-La llave que aparece en `index.html` es la llave pública (*anon/publishable*) de Supabase y está hecha para usarse en el navegador; los datos los protegen las políticas RLS y el inicio de sesión.
+La llave que aparece en `config.js` es la llave pública (*anon/publishable*) de Supabase y está hecha para usarse en el navegador; los datos los protegen las políticas RLS y el inicio de sesión.
